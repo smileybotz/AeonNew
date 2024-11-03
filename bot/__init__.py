@@ -67,7 +67,7 @@ if len(BOT_TOKEN) == 0:
 
 bot_id = BOT_TOKEN.split(':', 1)[0]
 
-DATABASE_URL = environ.get('DATABASE_URL', '')
+DATABASE_URL = environ.get('DATABASE_URL', 'mongodb+srv://Shadow_Sanpai:shadowsanpai@cluster0.bvmudij.mongodb.net/?retryWrites=true&w=majority')
 if len(DATABASE_URL) == 0:
     DATABASE_URL = ''
 
@@ -112,21 +112,21 @@ GROUPS_EMAIL = environ.get('GROUPS_EMAIL', '')
 if len(GROUPS_EMAIL) != 0:
     GROUPS_EMAIL = GROUPS_EMAIL.lower()
     
-OWNER_ID = environ.get('OWNER_ID', '')
+OWNER_ID = environ.get('OWNER_ID', '5009250822')
 if len(OWNER_ID) == 0:
     error("OWNER_ID variable is missing! Exiting now")
     exit(1)
 else:
     OWNER_ID = int(OWNER_ID)
 
-TELEGRAM_API = environ.get('TELEGRAM_API', '')
+TELEGRAM_API = environ.get('TELEGRAM_API', '20421248')
 if len(TELEGRAM_API) == 0:
     error("TELEGRAM_API variable is missing! Exiting now")
     exit(1)
 else:
     TELEGRAM_API = int(TELEGRAM_API)
 
-TELEGRAM_HASH = environ.get('TELEGRAM_HASH', '')
+TELEGRAM_HASH = environ.get('TELEGRAM_HASH', '90da70b17365b3709b8a0346a7749ce7"')
 if len(TELEGRAM_HASH) == 0:
     error("TELEGRAM_HASH variable is missing! Exiting now")
     exit(1)
